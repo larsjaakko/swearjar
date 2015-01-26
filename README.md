@@ -1,5 +1,7 @@
 # swearjar
-Automatic swearword generator in Norwegian
+Automatic swearword generator in Norwegian.
+
+Generated words are endocentric compounds consisting of a random head and modifier combination. Heads and modifiers are categorized into three classes; Nun, Normal and Northeners. 
 
 ## Frameworks
-Planned to use Django, Django-REST and React.js
+Built on Django, Django-REST, Bootstrap and React.js (just for the heck of it).

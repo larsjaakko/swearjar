@@ -7,6 +7,9 @@ class Category(models.Model):
 
     name = models.CharField(max_length=128, unique=True)
 
+    def __unicode__(self):
+        return self.name
+
 
 class Stem(models.Model):
 
@@ -14,3 +17,6 @@ class Stem(models.Model):
     word = models.CharField(max_length=128, unique=True)
     head = models.BooleanField(default=False)
     modifier = models.BooleanField(default=False)
+
+    def __unicode__(self):
+        return self.word

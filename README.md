@@ -7,4 +7,4 @@ Generated words are endocentric compounds consisting of a random head and modifi
 Built on Django, Django-REST, Bootstrap and React.js (just for the heck of it).
 
 ## Disclaimer
-If you're offended, I don't care.
+If you're offended, that is unfortunate.

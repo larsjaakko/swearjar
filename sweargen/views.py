@@ -21,7 +21,7 @@ def index(request):
     return render(request, 'sweargen/index.html', context_dict)
 
 
-class StemList(generics.ListCreateAPIView):
+class StemList(generics.ListAPIView):
     queryset = Stem.objects.all()
     serializer_class = StemSerializer
 

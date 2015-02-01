@@ -1,10 +1,13 @@
 from django.shortcuts import render
+import random
 
 from sweargen.models import Stem
 from sweargen.serializers import StemSerializer
 
 from rest_framework import generics
-
+from rest_framework.views import APIView
+from rest_framework.renderers import JSONRenderer
+from rest_framework.response import Response
 
 # Create your views here.
 
@@ -29,3 +32,44 @@ class StemList(generics.ListAPIView):
 class StemDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Stem.objects.all()
     serializer_class = StemSerializer
+
+
+class RandomStemList(generics.ListAPIView):
+
+    serializer_class = StemSerializer
+
+    num_random_objects = 10
+
+    def get_queryset(self):
+        all_objects = Stem.objects.all()
+        return random.sample(
+            all_objects,
+            min(self.num_random_objects, all_objects.count())
+            )
+
+
+class SwearGen(APIView):
+    """
+    A view that returns a combination of modifier and head, in the specified
+    category.
+    """
+
+    serializer_class = StemSerializer
+
+    def get(self, request, format=None):
+
+        category = self.request.QUERY_PARAMS.get('category', None)
+
+        heads = Stem.objects.filter(head=True, category=category)
+        modifiers = Stem.objects.filter(modifier=True, category=category)
+
+        headInstance = random.sample(heads, 1)
+        modifierInstance = random.sample(modifiers, 1)
+
+        head = headInstance[0].word
+        modifier = modifierInstance[0].word
+
+        swearword = modifier + head
+
+        content = {'swearword': swearword}
+        return Response(content)

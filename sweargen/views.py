@@ -50,8 +50,8 @@ class RandomStemList(generics.ListAPIView):
 
 class SwearGen(APIView):
     """
-    A view that returns a combination of modifier and head, in the specified
-    category.
+    A view that returns a combination of modifier and head,
+    in the specified category.
     """
 
     serializer_class = StemSerializer
@@ -63,13 +63,21 @@ class SwearGen(APIView):
         heads = Stem.objects.filter(head=True, category=category)
         modifiers = Stem.objects.filter(modifier=True, category=category)
 
-        headInstance = random.sample(heads, 1)
-        modifierInstance = random.sample(modifiers, 1)
+        diff = False
 
-        head = headInstance[0].word
+        while not diff:
+            modifierInstance = random.sample(modifiers, 1)
+            headInstance = random.sample(heads, 1)
+
+            diff = modifierInstance != headInstance
+
         modifier = modifierInstance[0].word
+        head = headInstance[0].word
+
+        if head.startswith(modifier[-1:]):
+            modifier.append('-')
 
         swearword = modifier + head
 
-        content = {'swearword': swearword}
+        content = {'swearword': swearword.capitalize()}
         return Response(content)

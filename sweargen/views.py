@@ -75,7 +75,7 @@ class SwearGen(APIView):
         head = headInstance[0].word
 
         if head.startswith(modifier[-1:]):
-            modifier.append('-')
+            modifier = modifier + '-'
 
         swearword = modifier + head
 

@@ -12,7 +12,8 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 TEMPLATE_PATH = os.path.join(BASE_DIR, 'templates')
-STATIC_PATH = os.path.join(BASE_DIR,'static')
+STATIC_PATH = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
@@ -99,7 +100,10 @@ STATICFILES_FINDERS = (
 )
 
 STATICFILES_DIRS = (
-    STATIC_PATH,
+    # Put strings here, like "/home/html/static" or "C:/www/django/static".
+    # Always use forward slashes, even on Windows.
+    # Don't forget to use absolute paths, not relative paths.
+    os.path.join(BASE_DIR, 'static'),
 )
 
 TEMPLATE_DIRS = [
@@ -116,4 +120,19 @@ REST_FRAMEWORK = {
         'rest_framework.renderers.JSONRenderer',
         'rest_framework.renderers.BrowsableAPIRenderer',
     ),
+}
+
+PIPELINE_ENABLED = True
+
+PIPELINE_COMPILERS = (
+    'react.utils.pipeline.JSXCompiler',
+)
+
+PIPELINE_JS = {
+    'swearjar': {
+        'source_filenames': (
+            'js/swearjar.jsx',
+        ),
+        'output_filename': 'js/swearjar.js',
+    }
 }

@@ -1,0 +1,1 @@
+(function(){var e=React.createClass({displayName:"MainFrame",render:function(){return React.createElement("div",{className:"mainFrame"},"Hello, world! I am the Main Frame for swearjar!")}});React.render(React.createElement(e,null),document.getElementById("content"))}).call(this);

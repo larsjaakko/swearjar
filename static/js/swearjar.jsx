@@ -4,7 +4,7 @@
 var MainFrame = React.createClass({
     getInitialState: function() {
         return {
-            data: {text: ''},
+            data: {text: 'Banneord.no'},
             url: "sweargen/?category=2",
         };
     },
@@ -30,12 +30,11 @@ var MainFrame = React.createClass({
         console.log('Her skal vi ha ny kategori', url);
     },
     componentDidMount: function() {
-        this.loadSwearWordFromServer();
+        /*this.loadSwearWordFromServer();*/
     },
     render: function() {
         return (
             <div className="mainFrame">
-                <h1>Banneord.no</h1>
                 <TopSite
                     data={this.state.data}
                     clickButton={this.handleClick}
@@ -49,12 +48,14 @@ var MainFrame = React.createClass({
 var TopSite = React.createClass({
     render: function() {
         return (
-            <div className="topSite">
-                <WordBox data={this.props.data}/>
-                <Category clickCategory={this.props.clickCategory}/>
-                <GeneratorButton clickButton={this.props.clickButton}/>
-                <AboutButton />
-            </div>
+            <section className="topSite fullHeight">
+                <div className="silo">
+                    <WordBox data={this.props.data}/>
+                    <Category clickCategory={this.props.clickCategory}/>
+                    <GeneratorButton clickButton={this.props.clickButton}/>
+                    <AboutButton />
+                </div>
+            </section>
         );
     }
 });
@@ -62,9 +63,16 @@ var TopSite = React.createClass({
 var BottomSite = React.createClass({
     render: function() {
         return (
-            <div className="bottomSite">
-                Hello, world! I am the bottom half of the site.
-            </div>
+            <section className="bottomSite fullHeight bottom">
+                <p>
+                    Banneord.no er en enkel side for deg som sliter med sinneutbrudd,
+                    men ikke vet å uttrykke deg skikkelig. Velg din foretrukne modus
+                    ved å klikke på fjesene og deretter den store, svarte knappen.
+                </p>
+                <p>
+                    Liker du Banneord.no? Prøv <a href="http://www.kortpakanten.no" class="kortpakanten">Kort på kanten</a>
+                </p>
+            </section>
         );
     }
 });
@@ -84,9 +92,9 @@ var WordBox = React.createClass({
 var SwearWord = React.createClass({
     render: function() {
         return (
-            <h2 className="swearWord">
+            <p className="swearWord">
                 {this.props.text}
-            </h2>
+            </p>
         );
     }
 });
@@ -97,10 +105,16 @@ var Category = React.createClass({
     },
     render: function() {
         return (
-            <div className="category">
-                <input type="radio" value="sweargen/?category=1" name="category" onChange={this.handleChange}/>Nonne
-                <input type="radio" value="sweargen/?category=2" name="category" defaultChecked="true"onChange={this.handleChange}/>Normal
-                <input type="radio" value="sweargen/?category=3" name="category" onChange={this.handleChange}/>Nordlending
+            <div className="category row">
+                <div className="four columns">
+                    <input type="radio" value="sweargen/?category=1" name="category" onChange={this.handleChange}/>Nonne
+                </div>
+                <div className="four columns">
+                    <input type="radio" value="sweargen/?category=2" name="category" defaultChecked="true"onChange={this.handleChange}/>Normal
+                </div>
+                <div className="four columns">
+                    <input type="radio" value="sweargen/?category=3" name="category" onChange={this.handleChange}/>Nordlending
+                </div>
             </div>
         );
     }
@@ -113,7 +127,7 @@ var GeneratorButton = React.createClass({
     render: function() {
         return (
             <div className="generatorButton">
-                <input type="button" onClick={this.handleClick.bind(this)} value="Me lyt banna!" />
+                <input type="button" className="button button-primary" onClick={this.handleClick.bind(this)} value="Me lyt banna!" />
             </div>
         );
     }
@@ -123,15 +137,11 @@ var AboutButton = React.createClass({
     render: function() {
         return (
             <div className="aboutButton">
-                About.
+                <input type="button" value="Hva er dette?" />
             </div>
         );
     }
 });
-
-var data = [
-    {text: "Albinoalkis moddaføkka"}
-];
 
 ReactDOM.render(
     <MainFrame />,

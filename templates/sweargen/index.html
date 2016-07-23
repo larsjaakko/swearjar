@@ -4,23 +4,43 @@
 
 <html>
 
-  <head>
+<head>
 
-    <title>Hello Swearjar with React</title>
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>Banneord.no - din ukvemsressurs</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Scripts
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.2.1/react.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.2.1/react-dom.js"></script>
     <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js"></script>
 
-  </head>
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="static/css/skeleton.css">
+    <link rel="stylesheet" href="static/css/normalize.css">
+    <link rel="stylesheet" href="static/css/custom.css">
 
-  <body>
-    <div id="content"></div>
+    <!-- Mobile Specific Metas
+ –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+    <div id="content">
+    </div>
+
 
     {% load compressed %}
     {% compressed_js 'swearjar' %}
 
-  </body>
+</body>
 
 </html>

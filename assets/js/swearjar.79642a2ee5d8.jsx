@@ -70,7 +70,7 @@ var BottomSite = React.createClass({
                     ved å klikke på fjesene og deretter den store, svarte knappen.
                 </p>
                 <p>
-                    Liker du Banneord.no? Prøv <a href="http://www.kortpakanten.no" class="kortpakanten">Kort på kanten</a>
+                    Liker du Banneord.no? Prøv <a href="www.kortpakanten.no" class="kortpakanten">Kort på kanten</a>
                 </p>
             </section>
         );

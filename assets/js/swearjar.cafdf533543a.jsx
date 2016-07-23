@@ -29,9 +29,9 @@ var MainFrame = React.createClass({
         this.setState({url: url});
         console.log('Her skal vi ha ny kategori', url);
     },
-    componentDidMount: function() {
-        /*this.loadSwearWordFromServer();*/
-    },
+    /*componentDidMount: function() {
+        this.loadSwearWordFromServer();
+    },*/
     render: function() {
         return (
             <div className="mainFrame">
@@ -63,15 +63,8 @@ var TopSite = React.createClass({
 var BottomSite = React.createClass({
     render: function() {
         return (
-            <section className="bottomSite fullHeight bottom">
-                <p>
-                    Banneord.no er en enkel side for deg som sliter med sinneutbrudd,
-                    men ikke vet å uttrykke deg skikkelig. Velg din foretrukne modus
-                    ved å klikke på fjesene og deretter den store, svarte knappen.
-                </p>
-                <p>
-                    Liker du Banneord.no? Prøv <a href="http://www.kortpakanten.no" class="kortpakanten">Kort på kanten</a>
-                </p>
+            <section className="bottomSite fullHeight">
+                Hello, world! I am the bottom half of the site.
             </section>
         );
     }

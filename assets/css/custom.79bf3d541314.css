@@ -1,0 +1,47 @@
+/* ----- Fonts -------*/
+
+@font-face {
+    font-family: 'woodford_bournebold';
+    src: url("../fonts/woodfordbourne/woodfordbourne-bold-webfont.47e83d2c4e7d.eot");
+    src: url("../fonts/woodfordbourne/woodfordbourne-bold-webfont.47e83d2c4e7d.eot?#iefix") format('embedded-opentype'),
+         url("../fonts/woodfordbourne/woodfordbourne-bold-webfont.2ab9c07048b7.woff2") format('woff2'),
+         url("../fonts/woodfordbourne/woodfordbourne-bold-webfont.87a567131a99.woff") format('woff'),
+         url("../fonts/woodfordbourne/woodfordbourne-bold-webfont.3dd8d6bb69f2.ttf") format('truetype'),
+         url("../fonts/woodfordbourne/woodfordbourne-bold-webfont.662a82acf326.svg#woodford_bournebold") format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* ----- Typography ----- */
+
+.swearWord {
+    font-size:10rem;
+}
+
+/* ----- Section general styling ----- */
+
+section {
+  text-align: center;
+  padding: 80px 0;
+}
+
+.category {
+}
+
+.wordBox {
+}
+
+.fullHeight {
+    height: 100%;
+}
+
+.vertical-centered {
+  position: absolute;;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  margin: auto;
+  width: 100%;
+}

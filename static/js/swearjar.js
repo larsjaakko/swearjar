@@ -4,7 +4,7 @@
 var MainFrame = React.createClass({displayName: "MainFrame",
     getInitialState: function() {
         return {
-            data: {text: ''},
+            data: {text: 'Banneord.no'},
             url: "sweargen/?category=2",
         };
     },
@@ -30,12 +30,11 @@ var MainFrame = React.createClass({displayName: "MainFrame",
         console.log('Her skal vi ha ny kategori', url);
     },
     componentDidMount: function() {
-        this.loadSwearWordFromServer();
+        /*this.loadSwearWordFromServer();*/
     },
     render: function() {
         return (
             React.createElement("div", {className: "mainFrame"}, 
-                React.createElement("h1", null, "Banneord.no"), 
                 React.createElement(TopSite, {
                     data: this.state.data, 
                     clickButton: this.handleClick, 
@@ -49,11 +48,13 @@ var MainFrame = React.createClass({displayName: "MainFrame",
 var TopSite = React.createClass({displayName: "TopSite",
     render: function() {
         return (
-            React.createElement("div", {className: "topSite"}, 
-                React.createElement(WordBox, {data: this.props.data}), 
-                React.createElement(Category, {clickCategory: this.props.clickCategory}), 
-                React.createElement(GeneratorButton, {clickButton: this.props.clickButton}), 
-                React.createElement(AboutButton, null)
+            React.createElement("section", {className: "topSite fullHeight"}, 
+                React.createElement("div", {className: "silo"}, 
+                    React.createElement(WordBox, {data: this.props.data}), 
+                    React.createElement(Category, {clickCategory: this.props.clickCategory}), 
+                    React.createElement(GeneratorButton, {clickButton: this.props.clickButton}), 
+                    React.createElement(AboutButton, null)
+                )
             )
         );
     }
@@ -62,8 +63,15 @@ var TopSite = React.createClass({displayName: "TopSite",
 var BottomSite = React.createClass({displayName: "BottomSite",
     render: function() {
         return (
-            React.createElement("div", {className: "bottomSite"}, 
-                "Hello, world! I am the bottom half of the site."
+            React.createElement("section", {className: "bottomSite fullHeight bottom"}, 
+                React.createElement("p", null, 
+                    "Banneord.no er en enkel side for deg som sliter med sinneutbrudd," + ' ' +
+                    "men ikke vet å uttrykke deg skikkelig. Velg din foretrukne modus" + ' ' +
+                    "ved å klikke på fjesene og deretter den store, svarte knappen."
+                ), 
+                React.createElement("p", null, 
+                    "Liker du Banneord.no? Prøv ", React.createElement("a", {href: "http://www.kortpakanten.no", class: "kortpakanten"}, "Kort på kanten")
+                )
             )
         );
     }
@@ -84,7 +92,7 @@ var WordBox = React.createClass({displayName: "WordBox",
 var SwearWord = React.createClass({displayName: "SwearWord",
     render: function() {
         return (
-            React.createElement("h2", {className: "swearWord"}, 
+            React.createElement("p", {className: "swearWord"}, 
                 this.props.text
             )
         );
@@ -97,10 +105,16 @@ var Category = React.createClass({displayName: "Category",
     },
     render: function() {
         return (
-            React.createElement("div", {className: "category"}, 
-                React.createElement("input", {type: "radio", value: "sweargen/?category=1", name: "category", onChange: this.handleChange}), "Nonne", 
-                React.createElement("input", {type: "radio", value: "sweargen/?category=2", name: "category", defaultChecked: "true", onChange: this.handleChange}), "Normal", 
-                React.createElement("input", {type: "radio", value: "sweargen/?category=3", name: "category", onChange: this.handleChange}), "Nordlending"
+            React.createElement("div", {className: "category row"}, 
+                React.createElement("div", {className: "four columns"}, 
+                    React.createElement("input", {type: "radio", value: "sweargen/?category=1", name: "category", onChange: this.handleChange}), "Nonne"
+                ), 
+                React.createElement("div", {className: "four columns"}, 
+                    React.createElement("input", {type: "radio", value: "sweargen/?category=2", name: "category", defaultChecked: "true", onChange: this.handleChange}), "Normal"
+                ), 
+                React.createElement("div", {className: "four columns"}, 
+                    React.createElement("input", {type: "radio", value: "sweargen/?category=3", name: "category", onChange: this.handleChange}), "Nordlending"
+                )
             )
         );
     }
@@ -113,7 +127,7 @@ var GeneratorButton = React.createClass({displayName: "GeneratorButton",
     render: function() {
         return (
             React.createElement("div", {className: "generatorButton"}, 
-                React.createElement("input", {type: "button", onClick: this.handleClick.bind(this), value: "Me lyt banna!"})
+                React.createElement("input", {type: "button", className: "button button-primary", onClick: this.handleClick.bind(this), value: "Me lyt banna!"})
             )
         );
     }
@@ -123,15 +137,11 @@ var AboutButton = React.createClass({displayName: "AboutButton",
     render: function() {
         return (
             React.createElement("div", {className: "aboutButton"}, 
-                "About."
+                React.createElement("input", {type: "button", value: "Hva er dette?"})
             )
         );
     }
 });
-
-var data = [
-    {text: "Albinoalkis moddaføkka"}
-];
 
 ReactDOM.render(
     React.createElement(MainFrame, null),

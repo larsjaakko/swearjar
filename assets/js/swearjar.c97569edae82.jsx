@@ -29,12 +29,12 @@ var MainFrame = React.createClass({
         this.setState({url: url});
         console.log('Her skal vi ha ny kategori', url);
     },
-    componentDidMount: function() {
-        /*this.loadSwearWordFromServer();*/
-    },
+    /*componentDidMount: function() {
+        this.loadSwearWordFromServer();
+    },*/
     render: function() {
         return (
-            <div className="mainFrame">
+            <div className="mainFrame container">
                 <TopSite
                     data={this.state.data}
                     clickButton={this.handleClick}
@@ -49,12 +49,10 @@ var TopSite = React.createClass({
     render: function() {
         return (
             <section className="topSite fullHeight">
-                <div className="silo">
                     <WordBox data={this.props.data}/>
                     <Category clickCategory={this.props.clickCategory}/>
                     <GeneratorButton clickButton={this.props.clickButton}/>
                     <AboutButton />
-                </div>
             </section>
         );
     }
@@ -63,15 +61,8 @@ var TopSite = React.createClass({
 var BottomSite = React.createClass({
     render: function() {
         return (
-            <section className="bottomSite fullHeight bottom">
-                <p>
-                    Banneord.no er en enkel side for deg som sliter med sinneutbrudd,
-                    men ikke vet å uttrykke deg skikkelig. Velg din foretrukne modus
-                    ved å klikke på fjesene og deretter den store, svarte knappen.
-                </p>
-                <p>
-                    Liker du Banneord.no? Prøv <a href="http://www.kortpakanten.no" class="kortpakanten">Kort på kanten</a>
-                </p>
+            <section className="bottomSite fullHeight">
+                Hello, world! I am the bottom half of the site.
             </section>
         );
     }
@@ -127,7 +118,9 @@ var GeneratorButton = React.createClass({
     render: function() {
         return (
             <div className="generatorButton">
-                <input type="button" className="button button-primary" onClick={this.handleClick.bind(this)} value="Me lyt banna!" />
+                <input type="button" class="button button-primary" onClick={this.handleClick.bind(this)} value="Me lyt banna!" />
+                <br></br>
+                <a class="button button-primary" href="https://github.com/dhg/Skeleton/releases/download/2.0.4/Skeleton-2.0.4.zip">Download</a>
             </div>
         );
     }

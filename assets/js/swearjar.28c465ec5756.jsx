@@ -65,7 +65,6 @@ var BottomSite = React.createClass({
         return (
             <section className="bottomSite fullHeight bottom" data-scroll-index="1">
                 <AboutText/>
-                <BackButton/>
             </section>
         );
     }
@@ -149,16 +148,6 @@ var AboutText = React.createClass({
                 <p>
                     Liker du Banneord.no? Prøv <a href="http://www.kortpakanten.no" className="kortpakanten">Kort på kanten</a>
                 </p>
-            </div>
-        );
-    }
-});
-
-var BackButton = React.createClass({
-    render: function() {
-        return (
-            <div className="aboutButton">
-                <a className="button" data-scroll-goto="0">La oss banne!</a>
             </div>
         );
     }

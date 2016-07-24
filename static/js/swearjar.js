@@ -48,7 +48,7 @@ var MainFrame = React.createClass({displayName: "MainFrame",
 var TopSite = React.createClass({displayName: "TopSite",
     render: function() {
         return (
-            React.createElement("section", {className: "topSite fullHeight"}, 
+            React.createElement("section", {className: "topSite fullHeight", "data-scroll-index": "0"}, 
                 React.createElement("div", {className: "silo"}, 
                     React.createElement(WordBox, {data: this.props.data}), 
                     React.createElement(Category, {clickCategory: this.props.clickCategory}), 
@@ -63,15 +63,9 @@ var TopSite = React.createClass({displayName: "TopSite",
 var BottomSite = React.createClass({displayName: "BottomSite",
     render: function() {
         return (
-            React.createElement("section", {className: "bottomSite fullHeight bottom"}, 
-                React.createElement("p", null, 
-                    "Banneord.no er en enkel side for deg som sliter med sinneutbrudd," + ' ' +
-                    "men ikke vet å uttrykke deg skikkelig. Velg din foretrukne modus" + ' ' +
-                    "ved å klikke på fjesene og deretter den store, svarte knappen."
-                ), 
-                React.createElement("p", null, 
-                    "Liker du Banneord.no? Prøv ", React.createElement("a", {href: "http://www.kortpakanten.no", class: "kortpakanten"}, "Kort på kanten")
-                )
+            React.createElement("section", {className: "bottomSite fullHeight bottom", "data-scroll-index": "1"}, 
+                React.createElement(AboutText, null), 
+                React.createElement(BackButton, null)
             )
         );
     }
@@ -137,7 +131,34 @@ var AboutButton = React.createClass({displayName: "AboutButton",
     render: function() {
         return (
             React.createElement("div", {className: "aboutButton"}, 
-                React.createElement("input", {type: "button", value: "Hva er dette?"})
+                React.createElement("a", {className: "button", "data-scroll-goto": "1"}, "Hva er dette?")
+            )
+        );
+    }
+});
+
+var AboutText = React.createClass({displayName: "AboutText",
+    render: function() {
+        return (
+            React.createElement("div", {className: "aboutText"}, 
+                React.createElement("p", null, 
+                    "Banneord.no er en enkel side for deg som sliter med sinneutbrudd," + ' ' +
+                    "men ikke vet å uttrykke deg skikkelig. Velg din foretrukne modus" + ' ' +
+                    "ved å klikke på fjesene og deretter den store, svarte knappen."
+                ), 
+                React.createElement("p", null, 
+                    "Liker du Banneord.no? Prøv ", React.createElement("a", {href: "http://www.kortpakanten.no", className: "kortpakanten"}, "Kort på kanten")
+                )
+            )
+        );
+    }
+});
+
+var BackButton = React.createClass({displayName: "BackButton",
+    render: function() {
+        return (
+            React.createElement("div", {className: "aboutButton"}, 
+                React.createElement("a", {className: "button", "data-scroll-goto": "0"}, "La oss banne!")
             )
         );
     }

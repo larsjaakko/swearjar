@@ -13,6 +13,18 @@
 
 }
 
+@font-face {
+    font-family: 'texta_altblack';
+    src: url('../fonts/texta/latinotype_-_textaalt-black-webfont.eot');
+    src: url('../fonts/texta/latinotype_-_textaalt-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/texta/latinotype_-_textaalt-black-webfont.woff2') format('woff2'),
+         url('../fonts/texta/latinotype_-_textaalt-black-webfont.woff') format('woff'),
+         url('../fonts/texta/latinotype_-_textaalt-black-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 /* ----- Typography ----- */
 
 .swearWord{
@@ -31,11 +43,18 @@
     color: gold;
 }
 
+.kortpakanten {
+    font-family: 'texta_altblack';
+    letter-spacing: -.1rem;
+    font-size: 4rem;
+    text-decoration: none;
+    color: gold;
+}
+
 /* ----- Section general styling ----- */
 
 section {
   text-align: center;
-  padding: 80px 0;
 }
 
 .container {

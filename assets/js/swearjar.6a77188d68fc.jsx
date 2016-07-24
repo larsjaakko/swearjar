@@ -30,6 +30,9 @@ var MainFrame = React.createClass({
         console.log('Her skal vi ha ny kategori', url);
     },
     componentDidMount: function() {
+        $(function(){
+            $.scrollIt();
+        });
         /*this.loadSwearWordFromServer();*/
     },
     render: function() {
@@ -64,8 +67,14 @@ var BottomSite = React.createClass({
     render: function() {
         return (
             <section className="bottomSite fullHeight bottom" data-scroll-index="1">
-                <AboutText/>
-                <BackButton/>
+                <p>
+                    Banneord.no er en enkel side for deg som sliter med sinneutbrudd,
+                    men ikke vet å uttrykke deg skikkelig. Velg din foretrukne modus
+                    ved å klikke på fjesene og deretter den store, svarte knappen.
+                </p>
+                <p>
+                    Liker du Banneord.no? Prøv <a href="http://www.kortpakanten.no" class="kortpakanten">Kort på kanten</a>
+                </p>
             </section>
         );
     }
@@ -132,33 +141,6 @@ var AboutButton = React.createClass({
         return (
             <div className="aboutButton">
                 <a className="button" data-scroll-goto="1">Hva er dette?</a>
-            </div>
-        );
-    }
-});
-
-var AboutText = React.createClass({
-    render: function() {
-        return (
-            <div className="aboutText">
-                <p>
-                    Banneord.no er en enkel side for deg som sliter med sinneutbrudd,
-                    men ikke vet å uttrykke deg skikkelig. Velg din foretrukne modus
-                    ved å klikke på fjesene og deretter den store, svarte knappen.
-                </p>
-                <p>
-                    Liker du Banneord.no? Prøv <a href="http://www.kortpakanten.no" className="kortpakanten">Kort på kanten</a>
-                </p>
-            </div>
-        );
-    }
-});
-
-var BackButton = React.createClass({
-    render: function() {
-        return (
-            <div className="aboutButton">
-                <a className="button" data-scroll-goto="0">La oss banne!</a>
             </div>
         );
     }

@@ -182,7 +182,7 @@ input[type="button"] {
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
-  background-color: transparent;
+  background-color: gold;
   border-radius: 5px;
   border: 1px solid #ffbf00;
   cursor: pointer;

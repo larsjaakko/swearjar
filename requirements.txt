@@ -1,6 +1,5 @@
 altgraph==0.10.2
 bdist-mpkg==0.5.0
-bonjour-py==0.3
 dj-database-url==0.4.1
 Django==1.7.3
 django-filter==0.9.2

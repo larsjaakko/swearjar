@@ -30,6 +30,8 @@
     .swearWord {
         font-size:12rem;
         letter-spacing: -0.4rem;
+        overflow: visible;
+        white-space: nowrap;;
     }
 }
 

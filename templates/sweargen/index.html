@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 
+{% load staticfiles %}
+
 <!-- index.html -->
 
 <html>
@@ -10,8 +12,8 @@
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta charset="utf-8">
     <title>Banneord.no - din ukvemsressurs</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Din generator av tilfeldige banneord!">
+    <meta name="author" content="Lars Jaakko Havro">
 
     <!-- Scripts
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -24,13 +26,19 @@
 
     <!-- CSS
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="stylesheet" href="static/css/skeleton.css">
-    <link rel="stylesheet" href="static/css/normalize.css">
-    <link rel="stylesheet" href="static/css/custom.css">
+    <link rel="stylesheet" href="{% static "css/skeleton.css" %}">
+    <link rel="stylesheet" href="{% static "css/normalize.css" %}">
+    <link rel="stylesheet" href="{% static "css/custom.css" %}">
+    <link rel="stylesheet" href="{% static "css/fonts.css" %}">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
 
     <!-- Mobile Specific Metas
- –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="{% static "images/favicon.png" %}">
 
 </head>
 

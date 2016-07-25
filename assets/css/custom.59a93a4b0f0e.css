@@ -1,0 +1,130 @@
+/* ----- Typography ----- */
+
+.swearWord{
+    font-size: 6rem;
+    line-height: 1.6;
+    letter-spacing: -.2rem;
+    font-family: 'woodford_bournebold';
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+}
+@media (min-width: 550px) {
+    .swearWord {
+        font-size:12rem;
+        letter-spacing: -0.4rem;
+    }
+}
+
+.bottom {
+    color: #fbda52;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+@media (min-width: 550px) {
+    .bottom {
+        font-size: 1.8rem;
+    }
+}
+
+
+.kortpakanten {
+    font-family: 'texta_altblack';
+    letter-spacing: -.1rem;
+    font-size: 3rem;
+    text-decoration: none;
+    color: #fbda52;
+    white-space: nowrap;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ----- Section general styling ----- */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+section {
+  text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ----- Component styling----- */
+
+.category {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.wordBox {
+    max-width: : inherit;
+    text-align: center;
+    overflow: hidden;
+}
+
+.topSite {
+    background-color: #fbda52;
+    position: relative;
+}
+
+.bottomSite {
+    background-color: black;
+}
+
+.aboutText{
+    display: inline-block;
+    max-width: 540px;
+    text-justify: auto;
+}
+
+.vertical-centered {
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  margin: auto;
+  width: 100%;
+}
+
+.backButton {
+    margin-bottom: 3rem;
+}
+
+/* ----- Radio buttons----- */
+
+.category input[type="radio"] {
+    display: none;
+}
+
+.category label {
+    display: inline-block;
+    color: black;
+    font-family: 'woodford_bournebold';
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.category input[type="radio"]:checked + label {
+    color: #5091AD;
+}
+
+/* ----- Misc. fixes----- */
+
+.fullHeight {
+    height: 100vh;
+}
+
+.paragraphFix {
+    align-items: center;
+}

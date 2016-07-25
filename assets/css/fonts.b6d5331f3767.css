@@ -1,0 +1,91 @@
+/* ----- Fonts -------*/
+
+@font-face {
+    font-family: 'woodford_bournebold';
+    src: url("../fonts/woodfordbourne/woodfordbourne-bold-webfont.47e83d2c4e7d.eot");
+    src: url("../fonts/woodfordbourne/woodfordbourne-bold-webfont.47e83d2c4e7d.eot?#iefix") format('embedded-opentype'),
+         url("../fonts/woodfordbourne/woodfordbourne-bold-webfont.2ab9c07048b7.woff2") format('woff2'),
+         url("../fonts/woodfordbourne/woodfordbourne-bold-webfont.87a567131a99.woff") format('woff'),
+         url("../fonts/woodfordbourne/woodfordbourne-bold-webfont.3dd8d6bb69f2.ttf") format('truetype'),
+         url("../fonts/woodfordbourne/woodfordbourne-bold-webfont.662a82acf326.svg#woodford_bournebold") format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'woodford_bourneregular';
+    src: url("../fonts/woodfordbourne/woodfordbourne-regular-webfont.3506e52d4b89.eot");
+    src: url("../fonts/woodfordbourne/woodfordbourne-regular-webfont.3506e52d4b89.eot?#iefix") format('embedded-opentype'),
+         url("../fonts/woodfordbourne/woodfordbourne-regular-webfont.23350a43c057.woff2") format('woff2'),
+         url("../fonts/woodfordbourne/woodfordbourne-regular-webfont.56732c532624.woff") format('woff'),
+         url("../fonts/woodfordbourne/woodfordbourne-regular-webfont.815be62a50af.ttf") format('truetype'),
+         url("../fonts/woodfordbourne/woodfordbourne-regular-webfont.4ee3a1cb59b1.svg#woodford_bourneregular") format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'woodford_bournethin';
+    src: url("../fonts/woodfordbourne/woodfordbourne-thin-webfont.ae4b493e5429.eot");
+    src: url("../fonts/woodfordbourne/woodfordbourne-thin-webfont.ae4b493e5429.eot?#iefix") format('embedded-opentype'),
+         url("../fonts/woodfordbourne/woodfordbourne-thin-webfont.726912e19e91.woff2") format('woff2'),
+         url("../fonts/woodfordbourne/woodfordbourne-thin-webfont.a5daef12f8cc.woff") format('woff'),
+         url("../fonts/woodfordbourne/woodfordbourne-thin-webfont.773a659485fe.ttf") format('truetype'),
+         url("../fonts/woodfordbourne/woodfordbourne-thin-webfont.e11c6a29fcaa.svg#woodford_bournethin") format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'texta_altblack';
+    src: url("../fonts/texta/latinotype_-_textaalt-black-webfont.d6348593f2c0.eot");
+    src: url("../fonts/texta/latinotype_-_textaalt-black-webfont.d6348593f2c0.eot?#iefix") format('embedded-opentype'),
+         url("../fonts/texta/latinotype_-_textaalt-black-webfont.77d15ad5c2d5.woff2") format('woff2'),
+         url("../fonts/texta/latinotype_-_textaalt-black-webfont.3c22a7bcc9b2.woff") format('woff'),
+         url("../fonts/texta/latinotype_-_textaalt-black-webfont.aecf1adae6a3.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'halis_rbold';
+    src: url("../fonts/halis-rounded/HalisR-Bold-webfont.c0e4da384cef.eot");
+    src: url("../fonts/halis-rounded/HalisR-Bold-webfont.c0e4da384cef.eot?#iefix") format('embedded-opentype'),
+         url("../fonts/halis-rounded/HalisR-Bold-webfont.042a69b4576b.woff2") format('woff2'),
+         url("../fonts/halis-rounded/HalisR-Bold-webfont.1098316cddb5.woff") format('woff'),
+         url("../fonts/halis-rounded/HalisR-Bold-webfont.c72cdde603e9.ttf") format('truetype'),
+         url("../fonts/halis-rounded/HalisR-Bold-webfont.799ab675a944.svg#halis_rbold") format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'halis_r_regularregular';
+    src: url("../fonts/halis-rounded/HalisR-Regular-webfont.21d50202681d.eot");
+    src: url("../fonts/halis-rounded/HalisR-Regular-webfont.21d50202681d.eot?#iefix") format('embedded-opentype'),
+         url("../fonts/halis-rounded/HalisR-Regular-webfont.a417f0021fd4.woff2") format('woff2'),
+         url("../fonts/halis-rounded/HalisR-Regular-webfont.b2ca09e71198.woff") format('woff'),
+         url("../fonts/halis-rounded/HalisR-Regular-webfont.0b8bcd509378.ttf") format('truetype'),
+         url("../fonts/halis-rounded/HalisR-Regular-webfont.30058ea47ca6.svg#halis_r_regularregular") format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'halis_rlight';
+    src: url("../fonts/halis-rounded/HalisR-Light-webfont.72b49ac464f6.eot");
+    src: url("../fonts/halis-rounded/HalisR-Light-webfont.72b49ac464f6.eot?#iefix") format('embedded-opentype'),
+         url("../fonts/halis-rounded/HalisR-Light-webfont.a632bd0386e2.woff2") format('woff2'),
+         url("../fonts/halis-rounded/HalisR-Light-webfont.69b30db21776.woff") format('woff'),
+         url("../fonts/halis-rounded/HalisR-Light-webfont.172e1597b851.ttf") format('truetype'),
+         url("../fonts/halis-rounded/HalisR-Light-webfont.6bc68e23c107.svg#halis_rlight") format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

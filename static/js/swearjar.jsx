@@ -49,7 +49,7 @@ var TopSite = React.createClass({
     render: function() {
         return (
             <section className="topSite fullHeight" data-scroll-index="0">
-                <div className="silo">
+                <div className="container">
                     <WordBox data={this.props.data}/>
                     <Category clickCategory={this.props.clickCategory}/>
                     <GeneratorButton clickButton={this.props.clickButton}/>
@@ -64,8 +64,11 @@ var BottomSite = React.createClass({
     render: function() {
         return (
             <section className="bottomSite fullHeight bottom" data-scroll-index="1">
-                <AboutText/>
-                <BackButton/>
+                <div className="container paragraphFix">
+                    <AboutText />
+                    <BackButton />
+                    <LinkText />
+                </div>
             </section>
         );
     }
@@ -101,13 +104,16 @@ var Category = React.createClass({
         return (
             <div className="category row">
                 <div className="four columns">
-                    <input type="radio" value="sweargen/?category=1" name="category" onChange={this.handleChange}/>Nonne
+                    <input type="radio" value="sweargen/?category=1" id="nonne" name="category" onChange={this.handleChange}/>
+                    <label htmlFor="nonne"><span>Nonne</span></label>
                 </div>
                 <div className="four columns">
-                    <input type="radio" value="sweargen/?category=2" name="category" defaultChecked="true"onChange={this.handleChange}/>Normal
+                    <input type="radio" value="sweargen/?category=2" id="normal" name="category" defaultChecked="true" onChange={this.handleChange}/>
+                    <label htmlFor="normal">Normal</label>
                 </div>
                 <div className="four columns">
-                    <input type="radio" value="sweargen/?category=3" name="category" onChange={this.handleChange}/>Nordlending
+                    <input type="radio" value="sweargen/?category=3" id="nordlending" name="category" onChange={this.handleChange}/>
+                    <label htmlFor="nordlending">Nordlending</label>
                 </div>
             </div>
         );
@@ -121,7 +127,7 @@ var GeneratorButton = React.createClass({
     render: function() {
         return (
             <div className="generatorButton">
-                <input type="button" className="button button-primary" onClick={this.handleClick.bind(this)} value="Me lyt banna!" />
+                <input type="button" className="button button-primary" onClick={this.handleClick.bind(this)} value="Lag banneord!" />
             </div>
         );
     }
@@ -141,13 +147,15 @@ var AboutText = React.createClass({
     render: function() {
         return (
             <div className="aboutText">
+                <h1>Hva er banneord.no?</h1>
                 <p>
-                    Banneord.no er en enkel side for deg som sliter med sinneutbrudd,
-                    men ikke vet å uttrykke deg skikkelig. Velg din foretrukne modus
-                    ved å klikke på fjesene og deretter den store, svarte knappen.
+                    Banneord.no er en enkel side for deg som sliter med temperamentet,
+                    men ikke vet å uttrykke deg skikkelig. <br></br>Klikk på din ønskede grad av
+                    stygghet og deretter den svarte knappen. Du vil da få servert
+                    et helt tilfeldig generert banneord.
                 </p>
                 <p>
-                    Liker du Banneord.no? Prøv <a href="http://www.kortpakanten.no" className="kortpakanten">Kort på kanten</a>
+                     Banneord.no har åpen kildekode. Du finner denne på <a href="https://github.com/larsjaakko/swearjar">GitHub</a>.
                 </p>
             </div>
         );
@@ -157,8 +165,20 @@ var AboutText = React.createClass({
 var BackButton = React.createClass({
     render: function() {
         return (
-            <div className="aboutButton">
+            <div className="backButton">
                 <a className="button" data-scroll-goto="0">La oss banne!</a>
+            </div>
+        );
+    }
+});
+
+var LinkText = React.createClass({
+    render: function() {
+        return (
+            <div className="aboutText">
+                <p>
+                    Liker du Banneord.no? Prøv <br></br><a href="http://www.kortpakanten.no" className="kortpakanten">Kort på kanten</a>
+                </p>
             </div>
         );
     }

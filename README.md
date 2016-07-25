@@ -6,5 +6,8 @@ Generated words are endocentric compounds consisting of a random head and modifi
 ## Frameworks
 Built on Django, Django-REST, Skeleton and React.js.
 
+## Live demo
+The project is live on (http://banneord.no)
+
 ## Disclaimer
 If you're offended by foul language, that is unfortunate.

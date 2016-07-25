@@ -89,7 +89,7 @@ var WordBox = React.createClass({displayName: "WordBox",
 var SwearWord = React.createClass({displayName: "SwearWord",
     render: function() {
         return (
-            React.createElement("p", {className: "swearWord"}, 
+            React.createElement("div", {className: "swearWord"}, 
                 this.props.text
             )
         );

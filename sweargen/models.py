@@ -17,7 +17,7 @@ class Category(models.Model):
 class Stem(models.Model):
 
     category = models.ForeignKey(Category)
-    word = models.CharField(max_length=128, unique=True)
+    word = models.CharField(max_length=128)
     head = models.BooleanField(default=False)
     modifier = models.BooleanField(default=False)
 

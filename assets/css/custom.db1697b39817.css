@@ -1,32 +1,15 @@
 /* ----- Typography ----- */
 
 .swearWord{
-    font-size: 4rem;
+    font-size: 6rem;
+    line-height: 1.6;
     letter-spacing: -.2rem;
     font-family: 'woodford_bournebold';
     -webkit-font-smoothing: antialiased;
     display: inline-block;
     word-wrap: break-word;
-    word-break: break-all;
-    white-space: normal;
-    width: 100%;
 }
-
-@media (min-width: 360px) {
-    .swearWord {
-        font-size:5rem;
-        letter-spacing: -0.2rem;
-    }
-}
-
 @media (min-width: 550px) {
-    .swearWord {
-        font-size:9rem;
-        letter-spacing: -0.2rem;
-    }
-}
-
-@media (min-width: 850px) {
     .swearWord {
         font-size:12rem;
         letter-spacing: -0.4rem;
@@ -87,7 +70,7 @@ section {
 .wordBox {
     max-width: : inherit;
     text-align: center;
-    /*overflow: auto;*/
+    overflow: auto;
 }
 
 .topSite {

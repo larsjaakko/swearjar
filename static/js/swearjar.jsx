@@ -1,5 +1,5 @@
-// This is more complex example that uses two components -
-// a service chooser form, and the individual services inside it.
+// React components for swearjar
+// Lars Jaakko Havro, 2016
 
 var MainFrame = React.createClass({
     getInitialState: function() {
